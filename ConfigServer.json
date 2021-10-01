@@ -1,0 +1,32 @@
+{
+  "814590548810792972": {
+    "suggestChannel": -1,
+    "punishmentChannel": "punishmentChannel",
+    "muteTag": "muteTag",
+    "feedbackChannel": "feedbackChannel"
+  },
+  "830933283901800490": {
+    "suggestChannel": -1,
+    "punishmentChannel": "punishmentChannel",
+    "muteTag": "muteTag",
+    "feedbackChannel": "feedbackChannel"
+  },
+  "823863924142243861": {
+    "suggestChannel": "831660598277439528",
+    "punishmentChannel": "punishmentChannel",
+    "muteTag": "muteTag",
+    "feedbackChannel": "feedbackChannel"
+  },
+  "834843907921674290": {
+    "suggestChannel": "834934377577316362",
+    "punishmentChannel": "834934377577316362",
+    "muteTag": "838885148195684412",
+    "feedbackChannel": "834934377577316362"
+  },
+  "851494237756719124": {
+    "suggestChannel": -1,
+    "punishmentChannel": "punishmentChannel",
+    "muteTag": "muteTag",
+    "feedbackChannel": "feedbackChannel"
+  }
+}
