@@ -1,16 +1,14 @@
-const Discord = require('discord.js');
-const client = new Discord.Client()
+const config = require(".Config/config.json");
+
+const crystol = require("crystolnetwork-log");
 
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('./dataBase/ConfigServer.json')
 const db = low(adapter)
-
 const bot = new Discord.Client();
-const crystol = require("crystolnetwork-log");
-const config = require("./Config/config.json")
 
-//------------------------------------------
+//Importações
 
 client.on("ready", () =>{
     console.log('Estou Online!')
@@ -19,14 +17,12 @@ client.on("ready", () =>{
 })
 
 client.on("guildCreate", (guild) => {
-    db.set(`${guild.id}`, {
+    db.set('834843907921674290', {
         suggestChannel: -1, 
-        punishmentChannel: "punishmentChannel",
-        feedbackChannel: "feedbackChannel",
-        muteTag: "muteTag"
-
+        punishmentChannel: "punishmentChannel"
     }, ).write() 
 })
+
 
 client.on('message', message => {
     if (message.author.bot) return;
@@ -42,7 +38,6 @@ client.on('message', message => {
         let funnycommandFile = require (`./Commands/funny/${command}.js`);
         delete require.cache [require.resolve(`./Commands/funny/${command}.js`)];
         return funnycommandFile.run(client, message, args);
-        
     }   catch (err) {
         console.error("Erro:" + err);
     }
@@ -68,13 +63,3 @@ client.on('message', message => {
         console.error("Erro:" + err);
     }
 });
-
-
-//--------------------------------------------
-
-//require('./Config/moduleloader.js')(client, Discord, fs)
-//client.command = new Discord.Collection(), client.aliases = new Discord.Collection()
-
-//---------------------------------------------
-
-client.login('SEU TOKEN') 
